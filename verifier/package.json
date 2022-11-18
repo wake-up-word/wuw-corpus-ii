@@ -1,0 +1,7 @@
+{
+    "name": "wuw-corpus-ii-verifier",
+    "private": true,
+    "engines": {
+        "node": ">=16"
+    }
+}

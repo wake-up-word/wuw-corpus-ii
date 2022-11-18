@@ -1,0 +1,274 @@
+From: Gagne, Paul
+Sent: Tuesday, January 08, 2002 1:58 PM
+To: Agnetta, Jim
+Subject: FW: Transcriptions:
+
+Please copy the DATA folder below onto 2 CDs
+
+ 
+
+-----Original Message-----
+From: Kepuska, Veton 
+Sent: Tuesday, January 08, 2002 9:38 AM
+To: Gagne, Paul
+Cc: Kepuska, Veton
+Subject: Transcriptions:
+
+ 
+
+Hi Paul,
+
+ 
+
+Here is the Information. As of today we have 102 calls in.
+
+ 
+
+Data:
+
+            \\Thinkboss02\Engineering\veton\WUWII_Corpus
+
+ 
+
+Starting Transcription File:
+
+ 
+
+            \\Thinkboss02\Engineering\veton\WUWII_Corpus\WUWII.trans
+
+ 
+
+Transcription file is of the form:
+
+ 
+
+# **************************************************************************************
+
+# ThinkEngine Networks 2002
+
+# **************************************************************************************
+
+# Date|Time|Gender|Dialect|Phonetype|Call NO|Utt. NO|File Name|Start Time|End Time|Ortho
+
+# ----+----+------+-------+---------+-------+-------+---------+----------+--------+-----
+
+12.21.2001|03.50.03|male|nonNative|landlinephone|00000|000|WUWII00000_000.ulaw|0|0|
+
+12.21.2001|03.50.15|male|nonNative|landlinephone|00000|001|WUWII00000_001.ulaw|0|0|Operator
+
+ 
+
+“#” Marks the Header.
+
+Next to last row depicts information contained in each record
+
+ 
+
+  a.. “[…]”   - Should be replaced by actual Text. 
+  b.. “0”’s    - Of Start Time and End Time should be replaced by actual measurement in unit of seconds  (e.g., 0.588). 
+  c.. First 32 calls have Dialect column all set to non-native due to an error. This needs correction based on the best judgment of the transcriber. 
+ 
+
+Transcription Conventions:
+
+ 
+
+            I have decided to use conventions used by LDC:
+
+ 
+
+      CONDITION 
+     SYMBOL 
+     DESCRIPTION 
+      
+      
+      
+     
+      ·  Numerals
+     twenty-two
+     all numerals are written out in full
+      
+      
+      
+     
+      ·  Acronyms I
+     @NATO
+     acroynyms pronounced as a single word
+      
+      
+      
+     
+      ·  Acronyms II
+     ~FBI
+     acronyms pronounced as series of letters
+      
+      
+      
+     
+      ·  Individual letters
+     ~A ~B ~C
+     Pronounced individual letters 
+      
+      
+      
+     
+      ·  Proper names
+     ^Homer 
+     both proper names and place names should be
+      
+      
+      
+     
+      ·  Partial words
+     absolu-
+     partial words are indicated with a dash
+      
+      
+      
+     
+      ·  Mispronounced words
+     +probably
+     mispronounced word
+      
+      
+      
+     
+      ·  Idiosyncratic words
+     *schlump
+     speaker uses a "made-up" word
+      
+      
+      
+     
+      ·  Speaker noise
+     {breath}
+     sound made by the talker. Use only those sounds described
+      
+      
+      
+     
+      ·  Background
+     [text]
+     sound not made by the talker (usually background)
+      
+      
+      
+     
+      ·  Background noise (extended)
+     [text/] [/text]
+     start / end of non speaker noise
+      
+      
+      
+     
+      ·  Semi-intelligible speech
+     ((text))
+     unintelligible speech. This is the transcriber's best attempt
+      
+      
+      
+     
+      ·  Unintelligible speech (token)
+     (( ))
+     completely unintelligible speech
+      
+      
+      
+     
+      ·  Unintelligible speech (long span)
+     [[skip]]
+     long period of unintelligible speech - skipped
+      
+      
+      
+     
+      ·  Repeated section of speech
+     [[repeat]]
+     Period of repeated speech (broadcast)
+      
+      
+      
+     
+      ·  Foreign language
+     <language text>
+     this is used to indicate foreign speech
+      
+      
+      
+     
+      ·  Speaker aside
+     <as> text </as>
+     aside made from main speaker to background individ.
+      
+      
+      
+     
+      ·  Overlapping speech (same channel)
+     <ov> text </ov>
+     used to indicate overlapping speech on
+      
+      
+      
+     
+
+ 
+
+English Nonlexemes 
+
+  a.. ach 
+  b.. ah 
+  c.. eee 
+  d.. eh 
+  e.. ew 
+  f.. ha 
+  g.. hee 
+  h.. huh 
+  i.. hm 
+  j.. huh 
+  k.. um 
+  l.. uh 
+  m.. oh 
+English Interjections (Considered as Words in Lexicon) 
+
+  a.. mhm 
+  b.. uh-huh 
+  c.. uh-oh 
+  d.. okay 
+  e.. whoa 
+  f.. whew 
+  g.. yeah 
+  h.. jeeze 
+This is about it. Let me know if I need to help out and/or give a more detailed instructions.
+
+ 
+
+--Veton
+
+ 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Veton Këpuska, Ph.D
+
+Speech Scientist
+
+ThinkEngine Networks, Inc.
+
+175 Maple Street
+
+Marlborough, MA 01752
+
+Tel. (508) 597-0467
+
+Tel. (508) 624-7600 (main)
+
+Fax. (508) 624-0289
+
+E-mail: vkepuska@thinkengine.net
+
+www.thinkengine.com
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ 
+
