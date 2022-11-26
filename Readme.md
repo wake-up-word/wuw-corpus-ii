@@ -11,8 +11,8 @@ For each session, at most 10 utterances were recorded. The number in the file na
 
 ```
 000 Speaker name
-001 Operator by it's self
-002 Think Engine by it's self
+001 Operator by itself
+002 Think Engine by itself
 003 Onword
 004 Wildfire
 005 Voyager
