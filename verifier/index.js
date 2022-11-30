@@ -17,74 +17,79 @@ const entries = [];
 
 let verifiedCount = 0;
 files.forEach(file => {
-    const info = file.split(',')
-    const filePath = path.resolve(root, 'calls', info[0]);
-    const exists = fs.existsSync(filePath);
-    if (!exists) {
-        console.log(`Cannot find: ${filePath}!`);
-        return;
+    try {
+        const info = file.split(',')
+        const filePath = path.resolve(root, 'calls', info[0]);
+        const exists = fs.existsSync(filePath);
+        if (!exists) {
+            console.log(`Cannot find: ${filePath}!`);
+            return;
+        }
+        const fileData = fs.readFileSync(filePath);
+
+        const checksum = crypto
+            .createHash('md5')
+            .update(fileData, 'utf8')
+            .digest('hex');
+
+        // pairs.push([file, checksum].join(','))
+
+        const checksumCorrect = checksum != info[1];
+
+        if (checksumCorrect) {
+            console.log(`File checksum incorrect!: ${filePath}! Expected ${info[1]}, got ${checksum} `);
+            return;
+        }
+
+        const transcriptionFileEntry = transcriptionFileEntries.find(entry => entry.includes(info[0].split('/')[1]));
+
+        if (!transcriptionFileEntry) {
+            console.log(`File transcription missing: ${filePath}!`);
+            return;
+        }
+
+        const [
+            date,
+            time,
+            gender,
+            dialect,
+            phonetype,
+            sessionNumber,
+            utteranceNumber,
+            fileName,
+            startTime,
+            endTime,
+            transcription
+        ] = transcriptionFileEntry.split('|');
+
+        const [month, day, year] = date.split('.')
+        const dateTime = new Date([year, month, day].join('-') + 'T' + time.replaceAll('.', ':'));
+        const userTimezoneOffset = dateTime.getTimezoneOffset() * 60000;
+
+        entries.push({
+            dateRecorded: new Date(dateTime.getTime() - userTimezoneOffset).toISOString(),
+            gender,
+            dialect,
+            phonetype,
+            sessionNumber,
+            utteranceNumber,
+            fileName,
+            filePath: path.relative(root, filePath),
+            checksum,
+            startTime: parseFloat(startTime),
+            endTime: parseFloat(endTime),
+            transcription
+        })
+
+        verifiedCount++;
+    } catch (err) {
+        console.log(`Unhandled error verifying ${file}!`);
+        throw err;
     }
-    const fileData = fs.readFileSync(filePath);
-
-    const checksum = crypto
-        .createHash('md5')
-        .update(fileData, 'utf8')
-        .digest('hex');
-
-    // pairs.push([file, checksum].join(','))
-
-    const checksumCorrect = checksum != info[1];
-
-    if (checksumCorrect) {
-        console.log(`File checksum incorrect!: ${filePath}! Expected ${info[1]}, got ${checksum} `);
-        return;
-    }
-
-    const transcriptionFileEntry = transcriptionFileEntries.find(entry => entry.includes(info[0].split('/')[1]));
-
-    if (!transcriptionFileEntry) {
-        console.log(`File transcription missing: ${filePath}!`);
-        return;
-    }
-
-    const [
-        date,
-        time,
-        gender,
-        dialect,
-        phonetype,
-        sessionNumber,
-        utteranceNumber,
-        fileName,
-        startTime,
-        endTime,
-        transcription
-    ] = transcriptionFileEntry.split('|');
-
-    const [month, day, year] = date.split('.')
-    const dateTime = new Date([year, month, day].join('-') + 'T' + time.replaceAll('.', ':'));
-    const userTimezoneOffset = dateTime.getTimezoneOffset() * 60000;
-
-    entries.push({
-        dateRecorded: new Date(dateTime.getTime() - userTimezoneOffset).toISOString(),
-        gender,
-        dialect,
-        phonetype,
-        sessionNumber,
-        utteranceNumber,
-        fileName,
-        filePath: path.relative(root, filePath),
-        checksum,
-        startTime: parseFloat(startTime),
-        endTime: parseFloat(endTime),
-        transcription
-    })
-
-    verifiedCount++;
 })
 
 // Uncomment to generate data.json
-// fs.writeFileSync(path.resolve(root, 'data.json'), JSON.stringify({ entries }, null, '    '));
+fs.writeFileSync(path.resolve(root, 'data.json'), JSON.stringify({ entries }, null, '    '));
 
 console.log(`${verifiedCount} /${files.length} files verified.`);
 if (verifiedCount !== files.length) {
