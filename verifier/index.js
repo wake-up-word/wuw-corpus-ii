@@ -3,19 +3,22 @@ const fs = require('fs');
 const path = require('path');
 console.log('Verifying dataset...');
 
-const listFilePath = path.resolve(__filename, '../../', 'WUWII_File_List.txt')
+const root = path.resolve(__filename, '..', '..');
+
+const listFilePath = path.resolve(root, 'archive', 'WUWII_File_List.txt')
 const listFile = fs.readFileSync(listFilePath).toString('utf8').trim();
 const files = listFile.split('\n');
 
-const transcriptionFilePath = path.resolve(__filename, '../../', 'WUWII_Transcriptions.txt')
+const transcriptionFilePath = path.resolve(root, 'archive', 'WUWII_Transcriptions.txt')
 const transcriptionFile = fs.readFileSync(transcriptionFilePath).toString('utf8').trim();
+const transcriptionFileEntries = transcriptionFile.split('\n');
 
-// const pairs = []
+const entries = [];
 
 let verifiedCount = 0;
 files.forEach(file => {
     const info = file.split(',')
-    const filePath = path.resolve(__filename, '../../calls', info[0]);
+    const filePath = path.resolve(root, 'calls', info[0]);
     const exists = fs.existsSync(filePath);
     if (!exists) {
         console.log(`Cannot find: ${filePath}!`);
@@ -30,21 +33,58 @@ files.forEach(file => {
 
     // pairs.push([file, checksum].join(','))
 
-    if (checksum != info[1]) {
+    const checksumCorrect = checksum != info[1];
+
+    if (checksumCorrect) {
         console.log(`File checksum incorrect!: ${filePath}! Expected ${info[1]}, got ${checksum} `);
         return;
     }
 
-    if (!transcriptionFile.includes(info[0].split('/')[1])) {
+    const transcriptionFileEntry = transcriptionFileEntries.find(entry => entry.includes(info[0].split('/')[1]));
+
+    if (!transcriptionFileEntry) {
         console.log(`File transcription missing: ${filePath}!`);
         return;
     }
 
+    const [
+        date,
+        time,
+        gender,
+        dialect,
+        phonetype,
+        sessionNumber,
+        utteranceNumber,
+        fileName,
+        startTime,
+        endTime,
+        transcription
+    ] = transcriptionFileEntry.split('|');
+
+    const [month, day, year] = date.split('.')
+    const dateTime = new Date([year, month, day].join('-') + 'T' + time.replaceAll('.', ':'));
+    const userTimezoneOffset = dateTime.getTimezoneOffset() * 60000;
+
+    entries.push({
+        dateRecorded: new Date(dateTime.getTime() - userTimezoneOffset).toISOString(),
+        gender,
+        dialect,
+        phonetype,
+        sessionNumber,
+        utteranceNumber,
+        fileName,
+        filePath: path.relative(root, filePath),
+        checksum,
+        startTime: parseFloat(startTime),
+        endTime: parseFloat(endTime),
+        transcription
+    })
 
     verifiedCount++;
 })
 
-// fs.writeFileSync('results.txt', pairs.join('\n'));
+// Uncomment to generate data.json
+// fs.writeFileSync(path.resolve(root, 'data.json'), JSON.stringify({ entries }, null, '    '));
 
 console.log(`${verifiedCount} /${files.length} files verified.`);
 if (verifiedCount !== files.length) {

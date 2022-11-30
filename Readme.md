@@ -26,7 +26,7 @@ For each session, at most 10 utterances were recorded. The number in the file na
 
 ## Labeling
 
-`WUWII_Transcriptions.txt` contains a manually hand created transcription and keyword time stamp. 
+`WUWII_Transcriptions.txt` contains a manually hand created transcription and keyword time stamp.
 
 For example, given:
 
@@ -54,8 +54,8 @@ node index.js
 
 # Reference
 
-Këpuska, Veton. (2011). Wake-Up-Word Speech Recognition. 10.5772/16242. 
+Këpuska, Veton. (2011). Wake-Up-Word Speech Recognition. 10.5772/16242.
 
 # License
 
-Data is licensed under Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) 
+Data is licensed under Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
