@@ -32,8 +32,6 @@ files.forEach(file => {
             .update(fileData, 'utf8')
             .digest('hex');
 
-        // pairs.push([file, checksum].join(','))
-
         const checksumCorrect = checksum != info[1];
 
         if (checksumCorrect) {
@@ -89,7 +87,7 @@ files.forEach(file => {
 })
 
 // Uncomment to generate data.json
-fs.writeFileSync(path.resolve(root, 'data.json'), JSON.stringify({ entries }, null, '    '));
+// fs.writeFileSync(path.resolve(root, 'data.json'), JSON.stringify({ entries }, null, '    '));
 
 console.log(`${verifiedCount} /${files.length} files verified.`);
 if (verifiedCount !== files.length) {
