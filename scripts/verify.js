@@ -26,7 +26,7 @@ data.entries.forEach(entry => {
         const checksumCorrect = checksum != entry.checksum;
 
         if (checksumCorrect) {
-            console.log(`File checksum incorrect!: ${filePath}! Expected ${info[1]}, got ${checksum} `);
+            console.log(`File checksum incorrect!: ${filePath}! Expected ${entry.checksum}, got ${checksum} `);
             return;
         }
 
