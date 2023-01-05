@@ -1508,7 +1508,7 @@
 01.11.2002|13.30.16|male|native|landlinephone|00138|008|WUWII00138_008.ulaw|1.904|2.467|{breath} I am going Onword
 01.11.2002|13.30.25|male|native|landlinephone|00138|009|WUWII00138_009.ulaw|2.152|2.780|{breath} He ran, calling Wildfire [noise]
 01.11.2002|13.30.34|male|native|landlinephone|00138|010|WUWII00138_010.ulaw|2.929|3.432|{clears throat} I will never buy a Plymouth Voyager
-01.11.2002|13.30.44|female|nonNative|landlinephone|00139|000|WUWII00139_000.ulaw0|0.038|0.980|[phone fuzz/] Owen Wilson [/phone fuzz]
+01.11.2002|13.30.44|female|nonNative|landlinephone|00139|000|WUWII00139_000.ulaw|0.038|0.980|[phone fuzz/] Owen Wilson [/phone fuzz]
 01.11.2002|13.41.35|female|nonNative|landlinephone|00139|001|WUWII00139_001.ulaw|0.595|1.142|[phone fuzz/] Operator [/phone fuzz]
 01.11.2002|13.41.46|female|nonNative|landlinephone|00139|002|WUWII00139_002.ulaw|0.592|1.188|[phone fuzz/] ThinkEngine [/phone fuzz]
 01.11.2002|13.41.53|female|nonNative|landlinephone|00139|003|WUWII00139_003.ulaw|0.518|1.043|[phone fuzz/] Onword [/phone fuzz]
@@ -2024,7 +2024,8 @@
 01.18.2002|11.30.30|female|native|landlinephone|00187|000|WUWII00187_000.ulaw|0.529|01.140|Jennifer Hart
 01.18.2002|11.30.41|female|native|landlinephone|00187|001|WUWII00187_001.ulaw|0.396|0.908|Operator
 01.18.2002|11.30.47|female|native|landlinephone|00187|002|WUWII00187_002.ulaw|0.108|0.711|ThinkEngine
-01.18.2002|11.30.53|female|native|landlinephone|00187|003|WUWII00187_003.ulaw|0.235|0.698|Onword 01.18.2002|11.31.00|female|native|landlinephone|00187|004|WUWII00187_004.ulaw|0.395|01.414| +Wildfair fire
+01.18.2002|11.30.53|female|native|landlinephone|00187|003|WUWII00187_003.ulaw|0.235|0.698|Onword 
+01.18.2002|11.31.00|female|native|landlinephone|00187|004|WUWII00187_004.ulaw|0.395|01.414| +Wildfair fire
 01.18.2002|11.31.06|female|native|landlinephone|00187|005|WUWII00187_005.ulaw|0.274|0.733| Voyager
 01.18.2002|11.31.23|female|native|landlinephone|00187|006|WUWII00187_006.ulaw|0.00|0.00|Tables containing quickly accessible summaries
 01.18.2002|11.31.38|female|native|landlinephone|00187|007|WUWII00187_007.ulaw|6.291|6.942| Clues to use boxes that expand on the lesson topics are explained new concepts ThinkEngine
@@ -2836,7 +2837,6 @@
 02.04.2002|10.42.03|male|native|cellphone|00264|008|WUWII00264_008.ulaw|1.575|2.104|the boat needs to go _Onword_ before we can untie it from the dock
 02.04.2002|10.42.16|male|native|cellphone|00264|009|WUWII00264_009.ulaw|1.030|1.696|{breath} the _Wildfires_ raged un- unruly
 02.04.2002|10.42.28|male|native|cellphone|00264|010|WUWII00264_010.ulaw|.992|1.585|planet _Voyager_ is only three hundred miles away
-#<<<<<
 02.04.2002|11.04.15|female|native|cellphone|00265|000|WUWII00265_000.ulaw|0.533|1.513|Terry Bailey {breath}
 02.04.2002|11.04.27|female|native|cellphone|00265|001|WUWII00265_001.ulaw|0.600|1.238|Operator
 02.04.2002|11.04.34|female|native|cellphone|00265|002|WUWII00265_002.ulaw|0.592|1.235|ThinkEngine [static]
@@ -3277,7 +3277,6 @@
 02.08.2002|08.02.19|female|native|landlinephone|00304|008|WUWII00304_008.ulaw|0|0|{breath} hospital spares liver program u ^Mass Memorial keeps transplants On-
 02.08.2002|08.02.32|female|native|landlinephone|00304|009|WUWII00304_009.ulaw|3.891|4.555|jury awards twenty one million (( )) verdict Wildfire
 02.08.2002|08.02.41|female|native|landlinephone|00304|010|WUWII00304_010.ulaw|0.741|1.380|[static] Voyager
-ngine
 02.08.2002|09.02.31|male|native|cellphone|00305|000|WUWII00305_000.ulaw|0.574|1.978|Ralph Nordgren
 02.08.2002|09.02.42|male|native|cellphone|00305|001|WUWII00305_001.ulaw|0.497|1.089|Operator
 02.08.2002|09.02.50|male|native|cellphone|00305|002|WUWII00305_002.ulaw|0.502|1.171|ThinkEngine
@@ -3410,8 +3409,7 @@ ngine
 02.12.2002|14.18.12|male|native|cellphone|00316|008|WUWII00316_008.ulaw|3.926|4.645|Voice activation technology uses Onword [background voices]
 02.12.2002|14.18.23|male|native|cellphone|00316|009|WUWII00316_009.ulaw|0.553|1.440|Wildfire meet me at 5:00
 02.12.2002|14.18.34|male|native|cellphone|00316|010|WUWII00316_010.ulaw|0.557|1.384|The _Voyager is on its way down the highway
-
-05.58|female|native|landlinephone|00300|006|WUWII00300_006.ulaw|0|0|[...] Operator
+02.07.2002|13.05.58|female|native|landlinephone|00300|006|WUWII00300_006.ulaw|0|0|[...] Operator
 02.07.2002|13.06.08|female|native|landlinephone|00300|007|WUWII00300_007.ulaw|0|0|[...] ThinkEngine
 02.07.2002|13.06.16|female|native|landlinephone|00300|008|WUWII00300_008.ulaw|0|0|[...] Onword
 02.07.2002|13.06.26|female|native|landlinephone|00300|009|WUWII00300_009.ulaw|0|0|[...] Wildfire
