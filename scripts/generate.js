@@ -5,10 +5,6 @@ console.log('Generating dataset...');
 
 const root = path.resolve(__filename, '..', '..');
 
-// const listFilePath = path.resolve(root, 'archive', 'WUWII_File_List.txt')
-// const listFile = fs.readFileSync(listFilePath).toString('utf8').trim();
-// const files = listFile.split('\n');
-
 const transcriptionFilePath = path.resolve(root, 'archive', 'WUWII_Transcriptions.txt')
 const transcriptionFile = fs.readFileSync(transcriptionFilePath).toString('utf8').trim();
 const transcriptionFileEntries = transcriptionFile.split('\n').splice(5);

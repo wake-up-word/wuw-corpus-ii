@@ -26,7 +26,9 @@ For each session, at most 10 utterances were recorded. The number in the file na
 
 ## Labeling
 
-`WUWII_Transcriptions.txt` contains a manually hand created transcription and keyword time stamp.
+You can find the transcription and keyword time stamp for each recording in `data.json`
+
+> `WUWII_Transcriptions.txt` contains a manually hand created transcription and keyword time stamp.
 
 For example, given:
 
@@ -40,16 +42,23 @@ The recording `WUWII00000_006.ulaw` contains the keyword `Operator` at time stam
 
 ## File checksums
 
-`WUWII_File_List.txt` is a csv file which contains the file name and md5 checksum of each `.ulaw` file.
+`data.json` contains the filename, md5 checksum, and other metadata of each `.ulaw` file.
 
 
 ## Programatic file verification
 
-The directory `./verifier` contains a nodejs v16 script that verifies the checksums of all files in `WUWII_File_List.txt` and checks if each has a transcription entry in `WUWII_Transcriptions.txt`;
+The directory `./scripts` contains a nodejs v16 script `verify.js` which verifies the checksums of all files in `data.json`
 
 ```
-cd ./verifier
-node index.js
+node scripts/verify.js
+```
+
+## Generate `data.json`
+
+`data.json` can be generated from `scripts/generate.js`.
+
+```
+node scripts/generate.js
 ```
 
 # Reference
