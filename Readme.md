@@ -61,6 +61,14 @@ node scripts/verify.js
 node scripts/generate.js
 ```
 
+# Converting to .wav
+
+you can convert .ulaw files to .wav using ffmpeg:
+
+```
+ffmpeg.exe -f mulaw -ar 8000 -i "wuw-corpus-ii\calls\00016\WUWII00016_001.ulaw" output_file.wav
+```
+
 # Reference
 
 Këpuska, Veton. (2011). Wake-Up-Word Speech Recognition. 10.5772/16242.
