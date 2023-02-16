@@ -34147,20 +34147,6 @@
             "transcription": "Jack (( ))"
         },
         {
-            "dateRecorded": "2002-01-29T13:44:07.000Z",
-            "gender": "male",
-            "dialect": "nonNative",
-            "phonetype": "cellphone",
-            "sessionNumber": "00228",
-            "utteranceNumber": "001",
-            "fileName": "WUWII00228_001.ulaw",
-            "filePath": "calls/00228/WUWII00228_001.ulaw",
-            "checksum": "0c4a16edca3b7c829593ffbfbd6274bc",
-            "startTime": 0,
-            "endTime": 0,
-            "transcription": ""
-        },
-        {
             "dateRecorded": "2002-01-29T13:45:12.000Z",
             "gender": "male",
             "dialect": "nonNative",
